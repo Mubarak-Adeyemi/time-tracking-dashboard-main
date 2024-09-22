@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --Blue: hsl(246, 89%, 57%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+  --white: hsl(100, 100%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  width: 100vw;
+  height: auto;
+  font-size: 15px;
+  background-color: var(--Very-dark-blue);
+  color: var(--Pale-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dash-board {
+  margin: 2rem auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--Dark-blue);
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  background-color: var(--Pale-Blue);
+}
+.user-info,
+nav,
+.card-body {
+  padding: 1rem 1.5rem;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  background-color: var(--Blue);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-weight: 300;
+}
+#profile-title {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+#profile-title span {
+  display: block;
+  padding-top: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+li button {
+  background: none;
+  color: var(--Desaturated-blue);
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+li button.active {
+  color: var(--Pale-Blue);
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+li button:hover {
+  cursor: pointer;
+  color: var(--Pale-Blue);
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+header,
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+.card {
+  border-radius: 1rem 1rem 2rem 2rem;
+}
+.work {
+  background: url(./images/icon-work.svg) top right no-repeat;
+  background-color: var(--Light-red-work);
+}
+.play {
+  background: url(./images/icon-play.svg) top right no-repeat;
+  background-color: var(--Soft-blue-play);
+}
+.study {
+  background: url(./images/icon-study.svg) top right no-repeat;
+  background-color: var(--Light-red-study);
+}
+.exercise {
+  background: url(./images/icon-exercise.svg) top right no-repeat;
+  background-color: var(--Lime-green-exercise);
+}
+.social {
+  background: url(./images/icon-social.svg) top right no-repeat;
+  background-color: var(--Violet-social);
+}
+.self-care {
+  background: url(./images/icon-self-care.svg) top right no-repeat;
+  background-color: var(--Soft-orange-self-care);
+}
+.card-header {
+  width: 100%;
+  height: 50px;
+}
+
+.card-body {
+  height: 100%;
+  background-color: var(--Dark-blue);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+}
+.card-body:hover {
+  background-color: var(--Desaturated-blue);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.title {
+  font-size: 0.9rem;
+}
+.time {
+  font-size: 1.5rem;
+}
+
+.card-body button {
+  background: transparent;
+  width: 50px;
+  border: none;
+  justify-self: end;
+}
+.card-body button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.card-body button,
+.previous {
+  text-align: right;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+  }
+  .dash-board {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+  }
+  header {
+    width: 100%;
+    flex: 1;
+    align-self: stretch;
+    margin: 0;
+  }
+  .profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background-color: var(--Pale-Blue);
+    margin-bottom: 10px;
+  }
+  .user-info {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    height: 60%;
+  }
+  #profile-title span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  ul {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  main {
+    flex: 2;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-body {
+    height: 100%;
+    background-color: var(--Dark-blue);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    row-gap: 5px;
+
+    grid-template-areas:
+      "title ellipsis"
+      "time time"
+      "previuos previuos";
+  }
+  .title {
+    font-size: 0.8rem;
+    grid-area: title;
+  }
+  .time {
+    font-size: 2.5rem;
+    grid-area: time;
+    text-align: left;
+  }
+  .card-body button {
+    grid-area: ellipsis;
+  }
+  .previous {
+    grid-area: previuos;
+    text-align: left;
+  }
+}
+
+@media (min-width: 900px) {
+  .dash-board {
+    width: 80%;
+  }
+  .user-info {
+    height: 70%;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main {
+    flex: 3;
+  }
+  .title {
+    font-size: 0.9rem;
+  }
+  .time {
+    font-size: 3rem;
+  }
+}
