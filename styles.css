@@ -33,6 +33,7 @@ body {
 .dash-board {
   margin: 2rem auto;
   width: 80%;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -50,6 +51,8 @@ header {
   border-radius: 50%;
   border: 2px solid var(--white);
   background-color: var(--Pale-Blue);
+  object-fit: cover;
+  /* object-position: center; */
 }
 .user-info,
 nav,
@@ -182,6 +185,7 @@ header,
 .previous {
   text-align: right;
   font-size: 0.7rem;
+  align-self: center;
 }
 
 @media (min-width: 768px) {
@@ -271,8 +275,8 @@ header,
   .dash-board {
     width: 80%;
   }
-  .user-info {
-    height: 70%;
+  .card-body {
+    padding: 1.5rem;
   }
   .cards {
     grid-template-columns: repeat(3, 1fr);
